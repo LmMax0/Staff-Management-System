@@ -22,7 +22,8 @@ public class MyLocalResolver implements LocaleResolver {
             String[] split = language.split("_");
             //语言 国家
             locale = new Locale(split[0],split[1]);
-            httpServletRequest.getSession().setAttribute("lang",language);
+//            httpServletRequest.getSession().setAttribute("lang",language);
+//            httpServletRequest.setAttribute("lang",language);
         }
 
         return locale;
