@@ -3,11 +3,14 @@ package com.lmdd.demo.dao;
 import com.lmdd.demo.pojo.Department;
 import com.lmdd.demo.pojo.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+// DAO 上的注解 @Repository
+@Repository
 public class EmployeeDao {
     //模拟数据中的信息
     private static Map<Integer, Employee> employees = null;

@@ -15,12 +15,18 @@ public class LoginHandlerInterceptor implements HandlerInterceptor {
         System.out.println(uri);
         System.out.println("登录拦截器~~~");
         HttpSession session = request.getSession(false);
-        if ( "/lmdd/main.html".equals(uri) && session == null){ //没有登录
-            response.sendRedirect(request.getContextPath()+"/index.html");
-            return false;
+        try {
+            if (session != null && session.getAttribute("loginUser") != null) { //有登录
+                return true;
+            }else {
+                response.sendRedirect("index.html");
+                return false;
+            }
+        }catch (NullPointerException e){
+            e.printStackTrace();
         }
 
-        return true;
+        return false;
     }
 
 

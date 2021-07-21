@@ -1,11 +1,14 @@
 package com.lmdd.demo.dao;
 
 import com.lmdd.demo.pojo.Department;
+import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 //部门dao
+// DAO 上的注解 @Repository
+@Repository
 public class DepartmentDao {
     //用来模拟数据库中的数据
     private static Map<Integer, Department> departments = null;
