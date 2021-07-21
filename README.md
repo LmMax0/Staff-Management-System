@@ -1,0 +1,3 @@
+# Staff-Management-System
+springboot...
+对springboot的一些基本实现，是员工管理系统，没有连接数据库
